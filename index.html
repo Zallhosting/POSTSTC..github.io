@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poststck - Rekber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Poststck</h1>
+    <div id="menu" onclick="openMenu()">&#x22EE;</div>
+    <div id="menu-content">
+        <button onclick="openSettings()">Pengaturan</button>
+    </div>
+</header>
+
+<!-- Pengaturan Profil -->
+<div id="settings" class="settings">
+    <h2>Pengaturan Profil</h2>
+    <form id="profileForm">
+        <label for="username">Nama Pengguna:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" required></textarea><br>
+        <label for="profilePicture">Foto Profil:</label>
+        <input type="file" id="profilePicture" accept="image/*"><br>
+        <button type="button" onclick="saveProfile()">Simpan Profil</button>
+    </form>
+</div>
+
+<!-- Sambutan Pengguna -->
+<div id="welcomeMessage" class="welcome-message">
+    <p>WELCOME! Selamat datang di Poststck! Web ini membantu Anda melakukan transaksi rekber dengan aman.</p>
+</div>
+
+<!-- Grup Rekber -->
+<div class="group-container">
+    <button class="create-group" onclick="createGroup()">+</button>
+    <div id="groupList"></div>
+</div>
+
+<!-- Profil Pengguna -->
+<div id="userProfile" class="user-profile">
+    <h2>Profil Saya</h2>
+    <p><strong>Nama Pengguna:</strong> <span id="profileUsername">User123</span></p>
+    <p><strong>Bio:</strong> <span id="profileBio">Saya pengguna baru di Poststck.</span></p>
+    <button class="follow-btn" onclick="followUser()">Follow</button>
+    <button onclick="viewProfile()">Lihat Profil</button>
+</div>
+
+<footer>
+    <p>&copy; 2025 Poststck - Semua hak dilindungi</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
